@@ -3,3 +3,5 @@ function getRandomHexColor() {
     .toString(16)
     .padStart(6, 0)}`;
 }
+
+// To be done a little bit later when I'll close other homeworks 

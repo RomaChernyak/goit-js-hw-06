@@ -22,12 +22,12 @@ const ingredientsList = document.getElementById('ingredients');
 const ingredientsArray = [];
 
 ingredients.forEach((ingredient) => {
-  const newItem = document.createElement('li');
-  newItem.classList.add('item');
-  newItem.textContent = ingredient;
+  const newLi = document.createElement('li');
+  newLi.classList.add('item');
+  newLi.textContent = ingredient;
   
   // console.log(newItem);
-  return ingredientsArray.push(newItem);
+  return ingredientsArray.push(newLi);
 });
 
 // console.log(ingredientsArray)

@@ -39,13 +39,23 @@ const galleryMarkup = images.reduce(
 galleryList.insertAdjacentHTML("beforeend", galleryMarkup);
 galleryList.setAttribute("style", "list-style-type:none; display:flex;")
 
+
+
+
+
+
+
+
+
+// Чернетка
+
 // const galleryListArray = [];
 
 // images.forEach(({ url, alt }) => {
 //   const newLi = document.createElement('li');
 //   const newImg = document.createElement('img');
   
-//   newImg.url = url;
+//   newImg.src = url;
 //   newImg.alt = alt;
 
 //   console.log(newImg);
