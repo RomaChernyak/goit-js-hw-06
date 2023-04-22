@@ -18,9 +18,23 @@ const requiredDataLength = Number(input.getAttribute("data-length"));
 input.addEventListener('blur', onInputChange);
 
 function onInputChange(event) {
+    // 1. Перед перевіркою на правильність введення необхідної кількості символів прибираємо атрибут class на випадок, якщо принаймні один раз ми вже ініціалізовували подію blur (і, відповідно, додавався один з CSS-класів 'valid' чи 'invalid')
+    input.removeAttribute('class');
+    
+    // 2. Таку ж само перевірку ми можемо зробити, але не видаляючи взагалі атрибут class, а очищуючи одне з наявних в ньому значень - 'valid' чи 'invalid' (див. рядки 25-31)
+    // if (input.classList.contains('valid')) {
+    //     input.classList.remove('valid');
+    // }
+
+    // if (input.classList.contains('invalid')) {
+    //     input.classList.remove('invalid');
+    // }
+    
     const typedText = event.currentTarget.value;
 
     typedText.length === requiredDataLength
         ? input.classList.add('valid')
         : input.classList.add('invalid');
+    
+    // console.log(input);
 }
